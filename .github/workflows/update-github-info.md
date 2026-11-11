@@ -5,7 +5,7 @@ intent: Keep Mona's GitHub information page accurate and relevant without bypass
 on:
   schedule: daily
   workflow_dispatch:
-  skip-if-match: 'is:pr is:open in:title "[update-github-info]"'
+  skip-if-match: 'is:pr is:open in:title "[mona]"'
 permissions:
   contents: read
   pull-requests: read
@@ -22,7 +22,7 @@ network:
     - github.com
 safe-outputs:
   create-pull-request:
-    title-prefix: "[update-github-info] "
+    title-prefix: "[mona] "
     draft: false
     allowed-files:
       - site/content/github-info.md
