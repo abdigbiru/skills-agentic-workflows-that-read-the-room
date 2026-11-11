@@ -42,7 +42,6 @@ safe-outputs:
    where available, avoid duplicate entries, and do not change unrelated content.
 4. If there are no meaningful updates, call the `noop` safe output with a short
    explanation. Do not make date-only changes or open an empty pull request.
-5. Otherwise, use the `create-pull-request` safe output to propose the changes
-   for Mona to review. Summarize the changes and their sources in the pull
-   request body and explicitly state that Mona should review them. Never push
-   directly to `main`, merge the pull request, or enable auto-merge.
+5. Open a pull request for Mona to review.
+   Use a pull request title that mentions Mona or GitHub Info.
+   Do not write directly to `main`; rely on `safe-outputs` with `create-pull-request`.
